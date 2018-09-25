@@ -2,7 +2,7 @@
 //  ImageDownloaderFileExtension.swift
 //  ImageDownloaderTests
 //
-//  Created by B0208142 on 24/09/18.
+//  Created by Mohit Jain on 24/09/18.
 //  Copyright © 2018 Mohit Jain. All rights reserved.
 //
 
