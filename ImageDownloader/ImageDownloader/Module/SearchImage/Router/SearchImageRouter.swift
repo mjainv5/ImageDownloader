@@ -11,12 +11,12 @@ import UIKit
 class SearchImageRouter: SearchImageWireframe {
     weak var viewController: SearchImageViewController?
     
-    class func assembleModule() -> UIViewController {
+    class func assembleModule(manager: NetworkRegistrar = NetworkManager.shared) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle:nil)
         let view = storyboard.instantiateViewController(withIdentifier: String(describing: SearchImageViewController.self)) as! SearchImageViewController
         
         let presenter = SearchImagePresentator()
-        let interactor = SearchImageInteractor()
+        let interactor = SearchImageInteractor(manager: manager)
         let router = SearchImageRouter()
         
         view.presenter = presenter

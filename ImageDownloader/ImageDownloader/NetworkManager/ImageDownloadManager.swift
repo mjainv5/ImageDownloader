@@ -20,8 +20,6 @@ class ImageDownloadManager: NSObject {
     private override init() {
         requestTracker = [UIImageView: (url: String, operation: ImageOperation, completion: ImageResponse)]()
         operationQueue = OperationQueue()
-//        operationQueue.qualityOfService = QualityOfService.utility
-//        operationQueue.maxConcurrentOperationCount = 20
     }
     
     //MARK:- Additional methods
@@ -39,7 +37,6 @@ class ImageDownloadManager: NSObject {
                 }
             }
         }
-//        newOperation.qualityOfService = QualityOfService.utility
         requestTracker[imageView] = (url, newOperation, completion)
         operationQueue.addOperation(newOperation)
     }

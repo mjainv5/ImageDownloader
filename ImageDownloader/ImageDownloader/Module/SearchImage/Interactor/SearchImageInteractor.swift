@@ -12,9 +12,9 @@ import UIKit
 class SearchImageInteractor: SearchImageUseCase {
     weak var output: SearchImageInteractorOutput?
     
-    private let manager: NetworkManager
+    private let manager: NetworkRegistrar
     
-    init(manager: NetworkManager = NetworkManager.shared) {
+    init(manager: NetworkRegistrar = NetworkManager.shared) {
         self.manager = manager
     }
     
@@ -24,7 +24,7 @@ class SearchImageInteractor: SearchImageUseCase {
             output?.fetchedImageError(errorMessage: kNoInternetConnection)
             return
         }
-        manager.stringRequest(urlString: getFormattedURL(searchText: searchText, pageNo: pageNo), type: RequestType.get) { [weak self] (stringResponse, error) -> (Void) in
+        manager.stringRequest(urlString: getFormattedURL(searchText: searchText, pageNo: pageNo), type: RequestType.get, params: nil, headers: nil) { [weak self] (stringResponse, error) -> (Void) in
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }

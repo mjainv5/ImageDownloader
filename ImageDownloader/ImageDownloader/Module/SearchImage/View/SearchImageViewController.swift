@@ -1,3 +1,4 @@
+
 //
 //  SearchImageViewController.swift
 //  ImageDownloader
@@ -15,7 +16,7 @@ class SearchImageViewController: UIViewController {
     private let numberOfRows: CGFloat = 3.0
     private var selectedFrame : CGRect?
     private var navigationInteractor : NavigationInteractor?
-    var selectedImage:UIImage?
+    private var selectedImage:UIImage?
     
     @IBOutlet weak var collectionViewImages: UICollectionView!
 

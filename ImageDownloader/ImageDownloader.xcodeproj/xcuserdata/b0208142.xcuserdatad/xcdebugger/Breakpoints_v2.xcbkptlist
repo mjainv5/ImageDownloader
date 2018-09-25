@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageDownloader/Module/SearchImage/View/ImageCollectionViewCell.swift"
+            timestampString = "559594513.814575"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "configure(model:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImageDownloader.ImageCollectionViewCell.configure(model: ImageDownloader.ImageModel) -&gt; ()"
+                  moduleName = "ImageDownloader"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/b0208142/Documents/Sample/ImageDownloader-master/ImageDownloader/ImageDownloader/Module/SearchImage/View/ImageCollectionViewCell.swift"
+                  timestampString = "559596769.096699"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__ObjC.UIImage&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ImageDownloader.ImageCollectionViewCell.configure(model: ImageDownloader.ImageModel) -&gt; ()"
+                  moduleName = "ImageDownloader"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/b0208142/Documents/Sample/ImageDownloader-master/ImageDownloader/ImageDownloader/Module/SearchImage/View/ImageCollectionViewCell.swift"
+                  timestampString = "559596769.104338"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -38,9 +38,10 @@ class SearchImagePresentator: SearchImagePresentation {
     }
     
     func bottomOfTableView() {
-        if pageNo < totalPages {
-            pageNo += 1
+        guard  pageNo < totalPages else {
+            return
         }
+        pageNo += 1
         getImages()
     }
     

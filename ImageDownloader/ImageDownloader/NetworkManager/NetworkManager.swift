@@ -17,7 +17,11 @@ typealias JSONResponse = (_ json: [AnyHashable: Any]?, _ error: Error?)-> (Void)
 typealias StringResponse = (_ string: String?, _ error: Error?)-> (Void)
 typealias ImageResponse = (_ image: UIImage?, _ error: Error?)-> (Void)
 
-class NetworkManager: NSObject {
+protocol NetworkRegistrar: class {
+    func stringRequest(urlString: String, type: RequestType , params: [AnyHashable: Any]?, headers: [String: String]?, handler: @escaping StringResponse)
+}
+
+class NetworkManager: NSObject,NetworkRegistrar {
     
     //MARK:- Varibales
     static let shared = NetworkManager()
@@ -28,14 +32,13 @@ class NetworkManager: NSObject {
     private override init() { // private init
         queue = DispatchQueue(label: "com.imageDownloader.requests.queue", qos: .utility)
         imageCache = NSCache<NSString, UIImage>()
-//        imageCache.countLimit = 50
     }
     
     //MARK:- Private methods
     private func invalidRequestError() -> NSError { // Invalid request error
         return NSError(domain:"Invalid URL", code:400, userInfo:[NSLocalizedDescriptionKey: "Invaild Request"])
     }
-
+    
     private func getRequest(urlString: String, type: RequestType , params: [AnyHashable: Any]?, headers: [String: String]? = nil,timeoutInterval: TimeInterval = 120) -> URLRequest? { // Create request
         var request: URLRequest?
         
